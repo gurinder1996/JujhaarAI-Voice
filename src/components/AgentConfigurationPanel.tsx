@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, TextField } from '@mui/material';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import '../styles/quill.css';
 
 const AgentConfigurationPanel: React.FC = () => {
   const [context, setContext] = useState(`IAPDA Overview
@@ -17,26 +18,35 @@ const AgentConfigurationPanel: React.FC = () => {
 
   const modules = {
     toolbar: [
-      [{ 'header': [1, 2, 'normal'] }],
-      ['bold', 'italic', 'underline'],
+      [{ 'header': [1, 2, false] }],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+      ['link', 'image'],
+      ['clean']
     ],
   };
 
   return (
     <Box sx={{ 
-      p: 3,
-      height: '100%',
+      height: '100%', 
+      p: 2,
       display: 'flex',
       flexDirection: 'column'
     }}>
       <Box sx={{ flex: 1, mb: 3 }}>
         <ReactQuill
+          theme="snow"
           value={context}
           onChange={setContext}
           modules={modules}
+          formats={[
+            'header',
+            'bold', 'italic', 'underline', 'strike', 'blockquote',
+            'list', 'bullet',
+            'link', 'image'
+          ]}
           style={{ 
-            height: 'calc(100% - 50px)',
+            height: '100%',
             '& .ql-editor': {
               fontSize: '14px',
               lineHeight: '1.5',

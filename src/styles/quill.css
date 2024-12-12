@@ -1,0 +1,17 @@
+.ql-editor {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.ql-container {
+  height: calc(100% - 42px) !important;
+}
+
+.ql-toolbar {
+  border-radius: 4px 4px 0 0;
+}
+
+.ql-container {
+  border-radius: 0 0 4px 4px;
+}

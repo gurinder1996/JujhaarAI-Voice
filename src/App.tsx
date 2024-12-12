@@ -31,9 +31,9 @@ const App: React.FC = () => {
         height: '100vh',
         bgcolor: '#f5f5f5'
       }}>
-        {/* Left Panel - System Prompt */}
+        {/* Left Panel - System Prompt - Largest */}
         <Box sx={{ 
-          width: '35%',
+          width: '45%',
           height: '100vh',
           bgcolor: 'white',
           borderRight: '1px solid #e0e0e0',
@@ -75,9 +75,9 @@ const App: React.FC = () => {
           <AgentConfigurationPanel />
         </Box>
 
-        {/* Middle Panel - Settings */}
+        {/* Middle Panel - Settings - Smaller */}
         <Box sx={{ 
-          width: '35%',
+          width: '27.5%',
           height: '100vh',
           bgcolor: 'white',
           borderRight: '1px solid #e0e0e0',
@@ -86,9 +86,9 @@ const App: React.FC = () => {
           <SettingsTabs />
         </Box>
 
-        {/* Right Panel - Preview */}
+        {/* Right Panel - Preview - Smaller */}
         <Box sx={{ 
-          width: '30%',
+          width: '27.5%',
           height: '100vh',
           bgcolor: 'white',
           overflow: 'auto'
